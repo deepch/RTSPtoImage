@@ -1,0 +1,65 @@
+# RTSPtoImage
+
+RTSP Stream to Image or Mjpeg
+
+use ffmpeg 
+
+![RTSPtoImage image](doc/demo4.png)
+
+
+## Installation
+
+Fist install ffmpeg!
+
+1.
+```bash
+go get github.com/deepch/RTSPtoImage
+```
+2.
+```bash
+cd src/github.com/deepch/RTSPtoImage
+```
+3.
+```bash
+go run *.go
+```
+4.
+```bash
+open web browser http://127.0.0.1:8083
+```
+
+## Configuration
+
+### Edit file config.json
+
+format:
+
+```bash
+{
+  "server": {
+    "http_port": ":8083"
+  },
+  "streams": {
+   "H264_AAC": {
+      "url": "rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mov"
+    }
+  }
+}
+```
+
+## Limitations
+
+Video Codecs Supported: H264 
+
+Audio Codecs Supported: no
+
+## Team
+
+Deepch - https://github.com/deepch streaming developer
+
+Dmitry - https://github.com/vdalex25 web developer
+
+
+[![paypal.me/AndreySemochkin](https://ionicabizau.github.io/badges/paypal.svg)](https://www.paypal.me/AndreySemochkin) - You can make one-time donations via PayPal. I'll probably buy a ~~coffee~~ tea. :tea:
+
+
