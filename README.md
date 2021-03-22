@@ -6,10 +6,27 @@ use ffmpeg
 
 ![RTSPtoImage image](doc/demo4.png)
 
+## Recommendation
+
+This is an example of getting pictures from rtsp stream
+
+- This is not a working project, this is an example!
+  
+- For ip cameras, I recommend using the usual get request for the poster. example for dahua [http://<IP address>/onvif/media_service/snapshot?channel=0&subtype=0]
+
+- For this example, I recommend using CUDA, but this will require separate work and will greatly reduce the load on the cpu.
+
+- I recommend limiting the number of frames when using mjpeg or using gpu.
 
 ## Installation
 
-Fist install ffmpeg!
+### mac os
+
+brew install ffmpeg
+
+### debian / ubuntu
+
+apt install libavcodec-dev libavcodec-ffmpeg56 libavformat-dev  libavformat-ffmpeg56
 
 1.
 ```bash
@@ -17,7 +34,7 @@ go get github.com/deepch/RTSPtoImage
 ```
 2.
 ```bash
-cd src/github.com/deepch/RTSPtoImage
+cd $GOPATH/src/github.com/deepch/RTSPtoImage
 ```
 3.
 ```bash
